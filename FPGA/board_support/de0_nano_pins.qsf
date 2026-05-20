@@ -1,0 +1,5 @@
+set_location_assignment PIN_R8 -to CLOCK_50
+
+set_location_assignment PIN_J15 -to reset_nset_global_assignment -name FAMILY "Cyclone V"
+
+set_global_assignment -name DEVICE 5CSEMA5F31C6

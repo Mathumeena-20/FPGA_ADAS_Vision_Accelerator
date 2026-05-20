@@ -1,0 +1,5 @@
+QUARTUS_VERSION = "22.1std"
+
+DATE = "2026-05-18"
+
+PROJECT_REVISION = "adas_fpga"

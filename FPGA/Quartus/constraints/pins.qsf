@@ -1,0 +1,27 @@
+#################################################
+# CLOCK
+#################################################
+
+set_location_assignment PIN_E1 -to CLOCK_50
+
+#################################################
+# RESET
+#################################################
+
+set_location_assignment PIN_M1 -to reset_n
+
+#################################################
+# CAMERA INPUTS
+#################################################
+
+set_location_assignment PIN_A1 -to camera_r[0]
+
+set_location_assignment PIN_B1 -to camera_g[0]
+
+set_location_assignment PIN_C1 -to camera_b[0]
+
+#################################################
+# LED OUTPUT
+#################################################
+
+set_location_assignment PIN_D1 -to led_output[0]

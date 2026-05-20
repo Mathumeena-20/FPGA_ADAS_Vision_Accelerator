@@ -1,0 +1,3 @@
+set_location_assignment PIN_E1 -to CLOCK_50
+
+set_location_assignment PIN_M1 -to reset_n

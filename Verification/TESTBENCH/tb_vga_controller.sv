@@ -1,0 +1,66 @@
+`timescale 1ns/1ps
+
+module tb_vga_controller;
+
+logic clk;
+logic reset_n;
+
+logic hsync;
+logic vsync;
+
+logic [7:0] red;
+logic [7:0] green;
+logic [7:0] blue;
+
+/////////////////////////////////////////////////
+// DUT
+/////////////////////////////////////////////////
+
+vga_controller dut(
+
+    .clk(clk),
+    .reset_n(reset_n),
+
+    .hsync(hsync),
+    .vsync(vsync),
+
+    .red(red),
+    .green(green),
+    .blue(blue)
+
+);
+
+/////////////////////////////////////////////////
+// CLOCK
+/////////////////////////////////////////////////
+
+always #20 clk = ~clk;
+
+/////////////////////////////////////////////////
+// TEST
+/////////////////////////////////////////////////
+
+initial
+begin
+
+    clk = 0;
+
+    reset_n = 0;
+
+    #100;
+
+    reset_n = 1;
+
+    //////////////////////////////////////////////////
+    // Run VGA Timing
+    //////////////////////////////////////////////////
+
+    #100000;
+
+    $display("VGA Controller Simulation Completed");
+
+    $finish;
+
+end
+
+endmodule
